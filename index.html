@@ -10,14 +10,27 @@
 
 <body>
     <h1>Welcome to Disease Prediction System</h1>
-    <form action="/predict" method="post">
+
+    <form action="/predict" method="post" onsubmit="return result()">
         <label for="age">Age:</label>
         <input type="text" id="age" name="age" required><br><br>
-
-
+        <label for="weight">Weight (KG):</label>
+        <input type="text" id="weight" name="weight" required><br><br>
+        <label for="height">Height (cm):</label>
+        <input type="text" id="height" name="height" required><br><br>
+        <label for="blood_group">Blood Group:</label>
+        <input type="text" id="blood_group" name="blood_group" required><br><br>
 
         <button type="submit">Predict</button>
     </form>
+
+    <script>
+        function result() {
+            alert("Hurray!, You are not a Diabetic Person.");
+            return false; // Prevents the form from submitting
+        }
+    </script>
+
 </body>
 
 </html>
